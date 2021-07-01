@@ -71,7 +71,7 @@ const Matches = (props) => {
                     <Card style={{ width: '18rem' }} className="match-info">
                         <Card.Body> 
                             <Card.Title id={item.unique_id}>{item.title}</Card.Title>
-                            <Card.Link id={item.unique_id} onClick={(e)=>handlePopup(true,e)}>Details</Card.Link>
+                            {/* <Card.Link id={item.unique_id} onClick={(e)=>handlePopup(true,e)}>Details</Card.Link> */}
                         </Card.Body>
                     </Card>
                 ) 
