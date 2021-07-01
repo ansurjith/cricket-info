@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+.page-wrap,.main-content{
+    padding:10px
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.bold-text{
+    font-weight: bolder;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.player-description{
+    display: flex;
 }
-
-.App-link {
-  color: #61dafb;
+@media only screen and (max-width:768px){
+    .player-description{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.match-switcher.nav.nav-tabs{
+    justify-content: center;
+    border: none;
+}
+.match-switcher.nav.nav-tabs a.nav-link.active {
+    border: none;
+    border-radius: 20px;
+    background: #007bff;
+    color: #fff;
+}
+.card.match-info{
+    margin-bottom: 10px;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+}
+.card.match-info:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+.match-info a{
+    cursor: pointer;
+}
+.description-wrap{
+    padding-left: 10px;
+}
+.player-description{
+    padding-bottom: 10px;
+}
+.center-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.player-summary-link {
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+.match-short-summary {
+    padding: 10px;
+}
+.match-short-summary span {
+    font-weight: bold;
+}
+.result-wrap {
+    padding: 10px;
+    border-bottom: 1px solid #a29a9a;
+}
+.result-wrap h6{
+    font-weight: bold;
 }
