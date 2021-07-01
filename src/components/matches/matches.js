@@ -43,7 +43,7 @@ const Matches = (props) => {
         <>
             {spinner === true && <div className="center-item"><Spinner variant="primary" animation="border"/></div>}
             <main className="main-content">  
-            {props.id === 'new-match' && spinner === false && props.newMatches.matches.map((item)=>{
+            {props.id === 'new-match' && spinner === false && props.newMatches.hasOwnProperty('error') ==false && props.newMatches.matches.map((item)=>{
                 
                 return (
                     <Card style={{ width: '18rem' }} className="match-info">
@@ -66,7 +66,7 @@ const Matches = (props) => {
                 ) 
             })}
 
-            {props.id === 'old-match' && spinner === false && props.oldMatches.data.map((item)=>{
+            {props.id === 'old-match' && spinner === false && props.oldMatches.hasOwnProperty('error') ==false && props.oldMatches.data.map((item)=>{
                 return (
                     <Card style={{ width: '18rem' }} className="match-info">
                         <Card.Body> 
